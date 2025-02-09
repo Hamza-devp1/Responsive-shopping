@@ -1,0 +1,39 @@
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #5e5e5e;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 160px 170px;
+    text-transform: capitalize;
+    margin-top: 70px;
+}
+
+/*  Tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .breadcrumb {
+        margin: 120px 80px;
+        font-size: 14px;
+        gap: 6px;
+    }
+}
+
+/*  Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+    .breadcrumb {
+        margin: 100px 40px;
+        font-size: 13px;
+        gap: 5px;
+    }
+}
+
+/*  Small Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+    .breadcrumb {
+        margin: 80px 20px;
+        font-size: 12px;
+        flex-wrap: wrap; /* Allows it to break into multiple lines if needed */
+        gap: 4px;
+    }
+}

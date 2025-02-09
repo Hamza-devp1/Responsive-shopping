@@ -1,0 +1,98 @@
+.popular {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    height: 90vh;
+    padding: 20px;
+}
+
+.popular h1 {
+    color: #171717;
+    font-size: 50px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.popular hr {
+    width: 200px;
+    height: 6px;
+    border-radius: 10px;
+    background: #252525;
+}
+
+/* Product Grid - Desktop: 4 items per row */
+.popular-item {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 items per row on desktop */
+    gap: 30px;
+    justify-content: center;
+}
+
+/* ---------------------- */
+/* RESPONSIVE DESIGN (Mobile & Tablet Only) */
+/* ---------------------- */
+
+/* Tablet Screens (Below 1024px) */
+@media (max-width: 1024px) {
+    .popular {
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    .popular h1 {
+        font-size: 40px;
+    }
+
+    .popular hr {
+        width: 150px;
+        height: 5px;
+    }
+
+    /* 2 items per row on tablets */
+    .popular-item {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+/* Mobile Screens (Below 768px) */
+@media (max-width: 768px) {
+    .popular {
+        height: auto;
+        padding: 30px 15px;
+    }
+
+    .popular h1 {
+        font-size: 32px;
+    }
+
+    .popular hr {
+        width: 120px;
+        height: 4px;
+    }
+
+    /* 1 item per row on mobile */
+    .popular-item {
+        margin-top: 30px;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 15px;
+    }
+}
+
+/* Small Mobile Screens (Below 480px) */
+@media (max-width: 480px) {
+    .popular h1 {
+        font-size: 28px;
+    }
+
+    .popular hr {
+        width: 100px;
+        height: 3px;
+    }
+
+    .popular-item {
+        gap: 10px;
+    }
+}

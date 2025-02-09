@@ -1,0 +1,159 @@
+.hero {
+    height: 100vh;
+    background: linear-gradient(180deg, #fde1ff, #e1ffea22 60%);
+    display: flex;
+    padding: 10px;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Hero Left Section */
+.hero-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding-left: 180px;
+    line-height: 1.1;
+}
+
+.hero-left h2 {
+    color: #090909;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.hero-left p {
+    color: #171717;
+    font-size: 100px;
+    font-weight: 700;
+}
+
+.hero-hand-icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.hero-hand-icon img {
+    width: 70px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Button Styling */
+.hero-latest-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 310px;
+    height: 70px;
+    border-radius: 75px;
+    margin-top: 30px;
+    background: #ff4141;
+    color: white;
+    font-size: 22px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.hero-latest-btn:hover {
+    background: #d83c3c;
+}
+
+/* Hero Right Section */
+.hero-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -20px;
+}
+
+.hero-right img {
+    width: 78%;
+    height: 78%;
+    object-fit: cover;
+}
+
+/* ---------------------- */
+/* RESPONSIVE DESIGN (Mobile & Tablet Only) */
+/* ---------------------- */
+
+/* Tablet Screens (Below 1024px) */
+@media (max-width: 1024px) {
+    .hero {
+        padding: 50px 30px;
+    }
+
+    .hero-left {
+        padding-left: 50px;
+    }
+
+    .hero-left p {
+        font-size: 80px;
+    }
+
+    .hero-latest-btn {
+        width: 260px;
+        height: 60px;
+        font-size: 20px;
+    }
+}
+
+/* Mobile Screens (Below 768px) */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+        padding: 40px 15px;
+    }
+
+    .hero-left {
+        padding-left: 0;
+        align-items: center;
+    }
+
+    .hero-left h2 {
+        font-size: 22px;
+    }
+
+    .hero-left p {
+        font-size: 60px;
+    }
+
+    .hero-hand-icon img {
+        width: 50px;
+    }
+
+    .hero-latest-btn {
+        width: 220px;
+        height: 55px;
+        font-size: 18px;
+    }
+
+    .hero-right img {
+        width: 80%;
+    }
+}
+
+/* Small Mobile Screens (Below 480px) */
+@media (max-width: 480px) {
+    .hero-left p {
+        font-size: 45px;
+    }
+
+    .hero-latest-btn {
+        width: 200px;
+        height: 50px;
+        font-size: 16px;
+    }
+
+    .hero-right img {
+        width: 90%;
+    }
+}

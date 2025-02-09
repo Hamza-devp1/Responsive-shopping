@@ -1,0 +1,182 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 5%;
+    box-shadow: 0 1px 3px -2px black;
+    position: relative;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-logo p {
+    color: #171717;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 40px;
+    color: #626262;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Hamburger Icon - Now Moved to End */
+.nav-hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Hover effect */
+.nav-menu li {
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.nav-menu li:hover {
+    color: #ff4141;
+}
+
+.nav-login-cart {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-login-cart button {
+    width: 140px;
+    height: 50px;
+    outline: none;
+    border: 1px solid #7a7a7a;
+    border-radius: 75px;
+    color: #515151;
+    font-size: 18px;
+    font-weight: 500;
+    background: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.nav-login-cart button:active {
+    background: #f3f3f3;
+}
+
+.nav-cart-count {
+    width: 22px;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -30px;
+    margin-left: -40px;
+    border-radius: 11px;
+    font-size: 14px;
+    background: red;
+    color: white;
+}
+
+/* ============== RESPONSIVE DESIGN ============== */
+
+/* Tablets (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+    .nav-menu {
+        gap: 30px;
+        font-size: 16px;
+    }
+
+    .nav-login-cart {
+        gap: 20px;
+    }
+
+    .nav-login-cart button {
+        width: 120px;
+        height: 45px;
+        font-size: 16px;
+    }
+}
+
+/* Mobile screens (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    .nav-right {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .nav-hamburger {
+        display: block; /* Show hamburger icon at the end */
+    }
+
+    .nav-menu {
+        display: none; /* Hide menu by default */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: white;
+        width: 100%;
+        padding: 20px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    .nav-menu.active {
+        display: flex; /* Show when active */
+    }
+
+    .nav-menu li {
+        padding: 10px 0;
+        font-size: 18px;
+    }
+
+    .nav-login-cart {
+        display: flex;
+        gap: 15px;
+    }
+
+    .nav-login-cart button {
+        width: 100px;
+        height: 40px;
+        font-size: 14px;
+    }
+}
+
+/* Mobile screens (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    .nav-logo p {
+        font-size: 24px;
+    }
+
+    .nav-login-cart button {
+        width: 90px;
+        height: 35px;
+        font-size: 12px;
+    }
+
+    .nav-cart-count {
+        width: 18px;
+        height: 18px;
+        font-size: 12px;
+    }
+}

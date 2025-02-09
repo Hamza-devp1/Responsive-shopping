@@ -1,0 +1,69 @@
+.new-collections {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 100px;
+}
+
+.new-collections h1 {
+    color: #171717;
+    font-size: 50px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.new-collections hr {
+    width: 200px;
+    height: 6px;
+    border-radius: 10px;
+    background: #252525;
+}
+
+/* Grid Layout for Items */
+.collections {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns for desktop */
+    margin-top: 50px;
+    gap: 30px;
+}
+
+/* ---------------------- */
+/* RESPONSIVE DESIGN */
+/* ---------------------- */
+
+/* Tablets (Below 1024px) */
+@media (max-width: 1024px) {
+    .collections {
+        grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+        gap: 25px;
+    }
+
+    .new-collections h1 {
+        font-size: 42px;
+    }
+}
+
+/* Large Mobiles & Small Tablets (Below 768px) */
+@media (max-width: 768px) {
+    .collections {
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+        gap: 20px;
+    }
+
+    .new-collections h1 {
+        font-size: 36px;
+    }
+}
+
+/* Small Mobiles (Below 480px) */
+@media (max-width: 480px) {
+    .collections {
+        grid-template-columns: repeat(1, 1fr); /* 1 item per row */
+        gap: 15px;
+    }
+
+    .new-collections h1 {
+        font-size: 28px;
+    }
+}
